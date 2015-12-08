@@ -1,0 +1,16 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>User Name</th><th>Company Name</th><th> Job Description</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/accounts/?account_id=<%= rs[i].account_id %>"> <%= rs[i].User_Name %></a></td>
+            <td><a href="/companies/?company_id=<%= rs[i].company_id %>"> <%= rs[i].name %> </a></td>
+            <td> <%= rs[i].description %> </td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No data is entered into the Account Job view database table.
+    <% } %>
+</div>

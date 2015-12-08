@@ -1,0 +1,6 @@
+<% if(rs.length > 0) { %>
+School: <%= rs[0].name %><br />
+Address: <%= rs[0].city %>
+<% } else { %>
+No school matched this school id <%= school_id %>.
+<% } %>

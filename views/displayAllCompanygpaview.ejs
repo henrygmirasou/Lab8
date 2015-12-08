@@ -1,0 +1,18 @@
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Name</th><th>Min_GPA</th><th>Max_GPA</th> <th>Avg_GPA</th> <th>Number of Students</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td> <%= rs[i].name %> </td>
+            <td><%= rs[i].min_gpa %> </td>
+            <td> <%= rs[i].max_gpa %> </td>
+            <td> <%= rs[i].avg_gpa %> </td>
+            <td> <%= rs[i].num_students %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No data is entered into the CompanyGPAView database table.
+    <% } %>
+</div>
